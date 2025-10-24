@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Advanced Password Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Advanced Password Manager</h1>
+
+    <section class="controls">
+      <button id="start-bg" class="btn">🎨 Start Background</button>
+      <button id="stop-bg" class="btn">🛑 Stop Background</button>
+    </section>
+
+    <section class="voice">
+      <h2>🎤 Voice Feedback</h2>
+      <div class="voice-buttons">
+        <button id="voice-save" class="btn">Save</button>
+        <button id="voice-strength" class="btn">Strength</button>
+        <button id="voice-verify" class="btn">Verify</button>
+      </div>
+      <p>Voice Status: <strong id="voice-status">Ready</strong></p>
+    </section>
+
+    <section class="strength-section">
+      <h2> Password Strength Checker</h2>
+      <input id="strength-input" type="password" placeholder="Type password to check strength" />
+      <div class="strength-meter"><div id="strength-bar" class="strength-bar"></div></div>
+      <div class="row">
+        <button id="check-strength" class="btn primary">Check Strength</button>
+        <div class="score">Score: <strong id="strength-score">0/100</strong></div>
+      </div>
+    </section>
+
+    <section class="save-section">
+      <h2>💾 Save New Password</h2>
+      <input id="website" type="text" placeholder="Website / App name" />
+      <input id="username" type="text" placeholder="Username or Email" />
+      <input id="password" type="password" placeholder="Password" />
+      <div class="row">
+        <button id="save-password" class="btn primary">Save Password</button>
+      </div>
+    </section>
+
+    <section class="verify-section">
+      <h2> Verify Password</h2>
+      <select id="saved-sites"><option>Select saved site</option></select>
+      <input id="verify-password" type="password" placeholder="Enter password to verify" />
+      <div class="row">
+        <button id="verify-btn" class="btn">Verify</button>
+        <div id="verify-result" class="verify-result"></div>
+      </div>
+    </section>
+
+    <section class="saved-section">
+      <h2>📂 Your Saved Passwords</h2>
+      <div id="password-list" class="password-list"></div>
+      <div class="row">
+        <button id="clear-all" class="btn danger">🗑️ Clear All</button>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <h2>📊 Security Dashboard</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-title">Total Passwords</div>
+          <div id="total-passwords" class="card-value">0</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Weak Passwords</div>
+          <div id="weak-passwords" class="card-value">0</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Average Score</div>
+          <div id="avg-score" class="card-value">0/100</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Last Check</div>
+          <div id="last-check" class="card-value">--</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
